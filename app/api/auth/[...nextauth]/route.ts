@@ -9,9 +9,12 @@ export const authOptions = {
     }),
   ],
   secret: process.env.NEXTAUTH_SECRET,
+  pages: {
+    signIn: "/auth", // Ensure this route exists
+  },
   callbacks: {
     async redirect({ url, baseUrl }) {
-      return `${baseUrl}/dashboard` // Redirect to /dashboard after login
+      return baseUrl + "/dashboard" // Redirect after login
     },
   },
 }
