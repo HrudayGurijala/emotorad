@@ -10,7 +10,7 @@ export const authOptions = {
   ],
   secret: process.env.NEXTAUTH_SECRET,
   pages: {
-    signIn: "/auth", // Ensure this route exists
+    signIn: "/dashboard", // Ensure this route exists
   },
   callbacks: {
     async redirect({ url, baseUrl }) {
